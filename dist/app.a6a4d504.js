@@ -11867,6 +11867,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
         /*  */
 
 
+
 // these keywords should not appear inside expressions, but operators like
 // typeof, instanceof and in are allowed
         var prohibitedKeywordRE = new RegExp('\\b' + (
@@ -12737,8 +12738,22 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 //
 //
 //
+//
         var _default = {
-            props: ['icon', 'iconPosition']
+            props: {
+                icon: {},
+                loading: {
+                    type: Boolean,
+                    default: false
+                },
+                iconPosition: {
+                    type: String,
+                    default: 'left',
+                    validator: function validator(value) {
+                        return value === 'left' || value === 'right';
+                    }
+                }
+            }
         };
         exports.default = _default;
         var $dc90fa = exports.default || module.exports;
@@ -12763,6 +12778,13 @@ parcelRequire = (function (modules, cache, entry, globalName) {
                     [
                         _vm.icon
                             ? _c("g-icon", {staticClass: "icon", attrs: {name: _vm.icon}})
+                            : _vm._e(),
+                        _vm._v(" "),
+                        _vm.loading
+                            ? _c("g-icon", {
+                                staticClass: "loading icon",
+                                attrs: {name: "loading"}
+                            })
                             : _vm._e(),
                         _vm._v(" "),
                         _c("div", {staticClass: "content"}, [_vm._t("default")], 2)
