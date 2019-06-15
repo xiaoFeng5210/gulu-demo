@@ -9,6 +9,11 @@ Vue.component('g-icon', Icon)
 new Vue({
     el:'#app',
     data:{
-        msg:'1'
+        jiazai: true
+    },
+    methods: {
+        changeLoading() {
+            this.jiazai = !this.jiazai
+        }
     }
 })
