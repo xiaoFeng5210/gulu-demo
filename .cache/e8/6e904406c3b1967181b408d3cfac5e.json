@@ -2,9 +2,9 @@
   "id": "index.html",
   "dependencies": [
     {
-      "name": "./node_modules\\vue\\dist\\vue.min.js",
+      "name": "./src\\app.js",
       "dynamic": true,
-      "resolved": "C:\\Users\\Administrator.PC-201811252049\\Desktop\\gulu-demo\\node_modules\\vue\\dist\\vue.min.js",
+      "resolved": "C:\\Users\\Administrator.PC-201811252049\\Desktop\\gulu-demo\\src\\app.js",
       "parent": "C:\\Users\\Administrator.PC-201811252049\\Desktop\\gulu-demo\\index.html"
     },
     {
@@ -15,15 +15,15 @@
     {
       "name": "C:\\Users\\Administrator.PC-201811252049\\Desktop\\gulu-demo\\package.json",
       "includedInParent": true,
-      "mtime": 1560496122808
+      "mtime": 1560498101032
     }
   ],
   "generated": {
-    "html": "<!DOCTYPE html>\r\n<html lang=\"zh-Hans\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <title>Gulu</title>\r\n    <style>*{\r\n            box-sizing: border-box;\r\n            padding:0;\r\n            margin:0;\r\n        }\r\n        :root{\r\n            --button-height:32px;\r\n            --font-size:14px;\r\n            --button-bg: white;\r\n            --button-active-bg: #eee;\r\n            --border-radius: 4px;\r\n            --color: #333;\r\n            --border-color: #999;\r\n            --border-color-hover: #666;\r\n        }\r\n        #app {\r\n            margin: 20px;\r\n        }\r\n        body {\r\n            font-size: var(--font-size);\r\n        }</style>\r\n</head>\r\n<body>\r\n<div id=\"app\">\r\n    <g-button></g-button>\r\n</div>\r\n<script src=\"/65b7cce7ae09629f953c2d4fee463479.js\"></script>\r\n\r\n<script>\r\n\r\n</script>\r\n</body>\r\n</html>"
+    "html": "<!DOCTYPE html>\r\n<html lang=\"zh-Hans\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <title>Gulu</title>\r\n    <style>*{\r\n            box-sizing: border-box;\r\n            padding:0;\r\n            margin:0;\r\n        }\r\n        :root{\r\n            --button-height:32px;\r\n            --font-size:14px;\r\n            --button-bg: white;\r\n            --button-active-bg: #eee;\r\n            --border-radius: 4px;\r\n            --color: #333;\r\n            --border-color: #999;\r\n            --border-color-hover: #666;\r\n        }\r\n        #app {\r\n            margin: 20px;\r\n        }\r\n        body {\r\n            font-size: var(--font-size);\r\n        }</style>\r\n    <style>\r\n\r\n    </style>\r\n</head>\r\n<body>\r\n<div id=\"app\">\r\n    <g-button>按钮</g-button>\r\n    <g-button icon=\"dianzan\">按钮</g-button>\r\n    <g-button icon=\"dianzan\" icon-position=\"right\">按钮</g-button>\r\n    <g-button :loading=\"jiazai\" @click=\"changeLoading\">按钮</g-button>\r\n    <g-button-group>\r\n        <g-button icon=\"zuo\">上一页</g-button>\r\n        <g-button icon=\"you\" icon-position=\"right\">下一页</g-button>\r\n    </g-button-group>\r\n</div>\r\n\r\n<script src=\"/bd9c9dcd314f2d7df52935b3a6a4d504.js\"></script>\r\n<script src=\"//at.alicdn.com/t/font_1243202_iueyx8wm6o.js\"></script>\r\n</body>\r\n</html>"
   },
   "sourceMaps": null,
   "error": null,
-  "hash": "4c977fe52cddc336b1b5594a7ffeaff9",
+  "hash": "40d816b5b257f3951ae6ecd843b989cb",
   "cacheData": {
     "env": {}
   }
