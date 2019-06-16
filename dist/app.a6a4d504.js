@@ -12428,7 +12428,7 @@ function patchScopedSlots (instance) {
         if (typeof $47c9c0 === 'function') {
             $47c9c0 = $47c9c0.options;
         }
-
+    
         /* template */
         Object.assign($47c9c0, (function () {
             var render = function () {
@@ -12723,12 +12723,24 @@ _vue.default.component('g-icon', _icon.default);
 new _vue.default({
   el: '#app',
   data: {
-    jiazai: true
+      jiazai: true,
+      jiazai2: false,
+      jiazai3: false,
+      jiazai4: false
   },
   methods: {
     changeLoading: function changeLoading() {
       this.jiazai = !this.jiazai;
-    }
+    },
+      changeLoading2: function changeLoading2() {
+          this.jiazai2 = !this.jiazai2;
+      },
+      changeLoading3: function changeLoading3() {
+          this.jiazai3 = !this.jiazai3;
+      },
+      changeLoading4: function changeLoading4() {
+          this.jiazai4 = !this.jiazai4;
+      }
   }
 });
     }, {
@@ -12765,7 +12777,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-    var ws = new WebSocket(protocol + '://' + hostname + ':' + "49909" + '/');
+    var ws = new WebSocket(protocol + '://' + hostname + ':' + "60809" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
