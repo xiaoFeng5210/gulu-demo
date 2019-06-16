@@ -1,3 +1,7 @@
+.g-icon[data-v-47c9c0] {
+    width: 1em;
+    height: 1em;
+}
 @keyframes spin-data-v-dc90fa {
 0% {
     transform: rotate(0deg);
@@ -45,34 +49,24 @@
 .g-button .loading[data-v-dc90fa] {
   animation: spin-data-v-dc90fa 1s infinite linear;
 }
-.g-icon[data-v-47c9c0] {
-  width: 1em;
-  height: 1em;
-}
-
 .g-button-group[data-v-dced83] {
     display: inline-flex;
     vertical-align: middle;
 }
-
 .g-button-group > .g-button[data-v-dced83] {
     border-radius: 0;
 }
-
 .g-button-group > .g-button[data-v-dced83]:not(:first-child) {
     margin-left: -1px;
 }
-
 .g-button-group > .g-button[data-v-dced83]:first-child {
     border-top-left-radius: var(--border-radius);
     border-bottom-left-radius: var(--border-radius);
 }
-
 .g-button-group > .g-button[data-v-dced83]:last-child {
     border-top-right-radius: var(--border-radius);
     border-bottom-right-radius: var(--border-radius);
 }
-
 .g-button-group > .g-button[data-v-dced83]:hover {
     position: relative;
     z-index: 1;
