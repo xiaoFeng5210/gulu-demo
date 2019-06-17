@@ -25,6 +25,10 @@
         body {
             font-size: var(--font-size);
         }
+
+        .box {
+            margin: 20px;
+        }
     </style>
     <style>
 
@@ -32,17 +36,32 @@
 </head>
 <body>
 <div id="app">
-    <g-button :loading="jiazai2" @click="changeLoading2">按钮</g-button>
-    <g-button :loading="jiazai3" @click="changeLoading3" icon="dianzan">按钮</g-button>
-    <g-button :loading="jiazai4" @click="changeLoading4" icon="dianzan" icon-position="right">按钮</g-button>
-    <g-button :loading="jiazai" @click="changeLoading">按钮</g-button>
-    <g-button-group>
-        <g-button icon="zuo">上一页</g-button>
-        <g-button icon="you" icon-position="right">下一页</g-button>
-    </g-button-group>
+    <!-- 输入框组件-->
+    <div class="box">
+        <g-input value="小雪"></g-input>
+        <g-input disabled value="小风"></g-input>
+        <g-input readonly value="小白"></g-input>
+    </div>
+    <div class="box">
+        <g-input error="错误" value="小y"></g-input>
+    </div>
+
+    <!-- 按钮组件-->
+    <div class="box">
+        <g-button :loading="jiazai2" @click="changeLoading2">按钮</g-button>
+        <g-button :loading="jiazai3" @click="changeLoading3" icon="dianzan">按钮</g-button>
+        <g-button :loading="jiazai4" @click="changeLoading4" icon="dianzan" icon-position="right">按钮</g-button>
+        <g-button :loading="jiazai" @click="changeLoading">按钮</g-button>
+        <g-button-group>
+            <g-button icon="zuo">上一页</g-button>
+            <g-button icon="you" icon-position="right">下一页</g-button>
+        </g-button-group>
+    </div>
+
+
 </div>
 
 <script src="./src/app.js"></script>
-<script src="//at.alicdn.com/t/font_1243202_iueyx8wm6o.js"></script>
+<script src="//at.alicdn.com/t/font_1243202_074dxyjpfde8.js"></script>
 </body>
 </html>

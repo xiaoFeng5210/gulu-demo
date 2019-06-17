@@ -3,48 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <title>Gulu</title>
-    <style>* {
-        box-sizing: border-box;
-        padding: 0;
-        margin: 0;
-    }
-
-    :root {
-        --button-height: 32px;
-        --font-size: 14px;
-        --button-bg: white;
-        --button-active-bg: #eee;
-        --border-radius: 4px;
-        --color: #333;
-        --border-color: #999;
-        --border-color-hover: #666;
-    }
-
-    #app {
-        margin: 20px;
-    }
-
-    body {
-        font-size: var(--font-size);
-    }</style>
+    <style>*{
+            box-sizing: border-box;
+            padding:0;
+            margin:0;
+        }
+        :root{
+            --button-height:32px;
+            --font-size:14px;
+            --button-bg: white;
+            --button-active-bg: #eee;
+            --border-radius: 4px;
+            --color: #333;
+            --border-color: #999;
+            --border-color-hover: #666;
+        }
+        #app {
+            margin: 20px;
+        }
+        body {
+            font-size: var(--font-size);
+        }
+        .box{
+            margin:20px;
+        }</style>
     <style>
 
     </style>
-    <link href="/app.a6a4d504.css" rel="stylesheet">
-</head>
+<link rel="stylesheet" href="/app.a6a4d504.css"></head>
 <body>
 <div id="app">
-    <g-button :loading="jiazai2" @click="changeLoading2">按钮</g-button>
-    <g-button :loading="jiazai3" @click="changeLoading3" icon="dianzan">按钮</g-button>
-    <g-button :loading="jiazai4" @click="changeLoading4" icon="dianzan" icon-position="right">按钮</g-button>
-    <g-button :loading="jiazai" @click="changeLoading">按钮</g-button>
-    <g-button-group>
-        <g-button icon="zuo">上一页</g-button>
-        <g-button icon="you" icon-position="right">下一页</g-button>
-    </g-button-group>
+    <!-- 输入框组件-->
+    <div class="box">
+        <g-input value="小雪"></g-input>
+        <g-input value="小风" disabled=""></g-input>
+        <g-input value="小白" readonly=""></g-input>
+    </div>
+    <div class="box">
+        <g-input value="小y" error="错误"></g-input>
+    </div>
+
+<!-- 按钮组件-->
+    <div class="box">
+        <g-button :loading="jiazai2" @click="changeLoading2">按钮</g-button>
+        <g-button :loading="jiazai3" @click="changeLoading3" icon="dianzan">按钮</g-button>
+        <g-button :loading="jiazai4" @click="changeLoading4" icon="dianzan" icon-position="right">按钮</g-button>
+        <g-button :loading="jiazai" @click="changeLoading">按钮</g-button>
+        <g-button-group>
+            <g-button icon="zuo">上一页</g-button>
+            <g-button icon="you" icon-position="right">下一页</g-button>
+        </g-button-group>
+    </div>
+
+
+
+
 </div>
 
 <script src="/app.a6a4d504.js"></script>
-<script src="//at.alicdn.com/t/font_1243202_iueyx8wm6o.js"></script>
+<script src="//at.alicdn.com/t/font_1243202_074dxyjpfde8.js"></script>
 </body>
 </html>
