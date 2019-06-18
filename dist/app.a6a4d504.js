@@ -12705,6 +12705,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
+//
+//
+//
+//
 var _default = {
   name: "input",
   components: {
@@ -12745,8 +12750,22 @@ exports.default = _default;
     { staticClass: "wrapper", class: { error: _vm.error } },
     [
       _c("input", {
-        attrs: { type: "text", disabled: _vm.disabled, readonly: _vm.readonly },
-        domProps: { value: _vm.value }
+        attrs: { disabled: _vm.disabled, readonly: _vm.readonly, type: "text" },
+        domProps: { value: _vm.value },
+        on: {
+          blur: function($event) {
+            return _vm.$emit("blur", $event.target.value)
+          },
+          change: function($event) {
+            return _vm.$emit("change", $event.target.value)
+          },
+          focus: function($event) {
+            return _vm.$emit("focus", $event.target.value)
+          },
+          input: function($event) {
+            return _vm.$emit("input", $event.target.value)
+          }
+        }
       }),
       _vm._v(" "),
       _vm.error
@@ -12824,7 +12843,8 @@ new _vue.default({
     jiazai: true,
     jiazai2: false,
     jiazai3: false,
-    jiazai4: false
+    jiazai4: false,
+    message: '"这里可以输入内容"'
   },
   methods: {
     changeLoading: function changeLoading() {
@@ -12869,7 +12889,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65504" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62314" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

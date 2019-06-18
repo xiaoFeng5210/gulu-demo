@@ -24,8 +24,9 @@
         body {
             font-size: var(--font-size);
         }
-        .box{
-            margin:20px;
+
+        .box {
+            margin: 20px;
         }</style>
     <style>
 
@@ -35,15 +36,16 @@
 <div id="app">
     <!-- 输入框组件-->
     <div class="box">
-        <g-input value="小雪"></g-input>
-        <g-input value="小风" disabled=""></g-input>
-        <g-input value="小白" readonly=""></g-input>
+        <g-input v-model="message"></g-input>
+        <p>{{message}}</p>
+        <g-input disabled="" value="小风"></g-input>
+        <g-input readonly="" value="小白"></g-input>
     </div>
     <div class="box">
-        <g-input value="小y" error="错误"></g-input>
+        <g-input error="错误" value="小y"></g-input>
     </div>
 
-<!-- 按钮组件-->
+    <!-- 按钮组件-->
     <div class="box">
         <g-button :loading="jiazai2" @click="changeLoading2">按钮</g-button>
         <g-button :loading="jiazai3" @click="changeLoading3" icon="dianzan">按钮</g-button>
@@ -54,8 +56,6 @@
             <g-button icon="you" icon-position="right">下一页</g-button>
         </g-button-group>
     </div>
-
-
 
 
 </div>

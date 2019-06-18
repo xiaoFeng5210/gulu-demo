@@ -38,7 +38,8 @@
 <div id="app">
     <!-- 输入框组件-->
     <div class="box">
-        <g-input value="小雪"></g-input>
+        <g-input v-model="message"></g-input>
+        <p>{{message}}</p>
         <g-input disabled value="小风"></g-input>
         <g-input readonly value="小白"></g-input>
     </div>

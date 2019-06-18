@@ -17,6 +17,7 @@ new Vue({
         jiazai2: false,
         jiazai3: false,
         jiazai4: false,
+        message: '"这里可以输入内容"'
     },
     methods: {
         changeLoading() {
