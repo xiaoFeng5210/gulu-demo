@@ -28,22 +28,28 @@
         .box {
             margin: 20px;
         }</style>
-    <style>
+
+    <style>.rowbox{
 
 
-    </style>
+    }
+        .colbox{
+            height:50px;
+
+
+        }</style>
 <link rel="stylesheet" href="/app.a6a4d504.css"></head>
 <body>
 <div id="app">
-<!--    网格系统-->
-    <g-row gutter="10">
-        <g-col>1</g-col>
-        <g-col>2</g-col>
-        <g-col>3</g-col>
+    <!--    网格系统-->
+    <g-row gutter="100">
+        <g-col class="colbox" span="8">1</g-col>
+        <g-col class="colbox" span="8">2</g-col>
+        <g-col class="colbox" span="8">3</g-col>
     </g-row>
-    <g-row>
+    <g-row class="rowbox">
         <g-col span="2">1</g-col>
-        <g-col span="20" offset="2">2</g-col>
+        <g-col offset="2" span="20">2</g-col>
     </g-row>
     <!-- 输入框组件-->
     <div class="box">

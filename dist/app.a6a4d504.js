@@ -12835,6 +12835,7 @@ var _default = {
     }
   },
   computed: {
+    //使用计算属性来实现gutter的值。
     rowStyle: function rowStyle() {
       var gutter = this.gutter;
       return {
@@ -12846,6 +12847,8 @@ var _default = {
   mounted: function mounted() {
     var _this = this;
 
+    //这一步是row组件通过遍历子组件（col）的形式来传递给子组件数据gutter.必须是在mounted阶段。mounted阶段是组件在页面
+    //渲染后的阶段。
     this.$children.forEach(function (vm) {
       vm.gutter = _this.gutter;
     });
@@ -12911,12 +12914,35 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
 //
 //
 //
 //
 //
 //
+//
+//
+//
+var validator = function validator(value) {
+  var keys = Object.keys(value);
+  var valid = true;
+  keys.forEach(function (key) {
+    if (!['span', 'offset'].includes(key)) {
+      valid = false;
+    }
+  });
+  return valid;
+};
+
 var _default = {
   name: "col",
   props: {
@@ -12926,12 +12952,50 @@ var _default = {
     // 想要完成两列之间有空格的需求
     offset: {
       type: [Number, String]
+    },
+    ipad: {
+      type: Object,
+      validator: validator
+    },
+    narrowPc: {
+      type: Object,
+      validator: validator
+    },
+    pc: {
+      type: Object,
+      validator: validator
+    },
+    widePc: {
+      type: Object,
+      validator: validator
     }
   },
   data: function data() {
     return {
-      gutter: 0
+      gutter: null
     };
+  },
+  methods: {
+    //造一个函数，传两个参数，str参数的意思是诸如pc-,ipad-
+    createClasses: function createClasses(obj) {
+      var str = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
+
+      if (!obj) {
+        return [];
+      }
+
+      var array = [];
+
+      if (obj.span) {
+        array.push("col-".concat(str).concat(obj.span));
+      }
+
+      if (obj.offset) {
+        array.push("offset-".concat(str).concat(obj.offset));
+      }
+
+      return array;
+    }
   },
   computed: {
     colStyle: function colStyle() {
@@ -12939,6 +13003,19 @@ var _default = {
         paddingLeft: this.gutter / 2 + 'px',
         paddingRight: this.gutter / 2 + 'px'
       };
+    },
+    colClass: function colClass() {
+      var span = this.span,
+          offset = this.offset,
+          ipad = this.ipad,
+          narrowPc = this.narrowPc,
+          pc = this.pc,
+          widePc = this.widePc;
+      var createClasses = this.createClasses;
+      return [].concat(_toConsumableArray(createClasses({
+        span: span,
+        offset: offset
+      })), _toConsumableArray(createClasses(ipad, 'ipad-')), _toConsumableArray(createClasses(narrowPc, 'narrow-pc-')), _toConsumableArray(createClasses(pc, 'pc-')), _toConsumableArray(createClasses(widePc, 'wide-pc-')));
     }
   }
 };
@@ -12957,9 +13034,15 @@ exports.default = _default;
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "col", style: _vm.colStyle },
-    [_vm._t("default")],
-    2
+    { staticClass: "col", class: _vm.colClass, style: _vm.colStyle },
+    [
+      _c(
+        "div",
+        { staticStyle: { border: "1px solid grey" } },
+        [_vm._t("default")],
+        2
+      )
+    ]
   )
 }
 var staticRenderFns = []
@@ -13078,7 +13161,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56891" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63287" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
