@@ -35,12 +35,20 @@
         .colbox {
             height: 50px;
         }
-
+        .demo{
+            border:1px solid grey;
+            min-height:100px;
+        }
     </style>
 </head>
 <body>
 <div id="app">
 <!--    布局组件-->
+    <g-layout>
+        <g-header class="demo"></g-header>
+        <g-content class="demo"></g-content>
+        <g-footer class="demo"></g-footer>
+    </g-layout>
 
     <!--    网格系统-->
 <!--    <g-row gutter="100">-->
