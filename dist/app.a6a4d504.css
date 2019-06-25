@@ -840,3 +840,15 @@
     margin-left: 100%;
 }
 }
+.layout[data-v-f47cfb] {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+}
+.layout.hasSider[data-v-f47cfb] {
+  flex-direction: row;
+}
+.content[data-v-40fa9b] {
+  flex-grow: 1;
+}

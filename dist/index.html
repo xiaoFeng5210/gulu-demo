@@ -29,51 +29,59 @@
             margin: 20px;
         }</style>
 
-    <style>.rowbox {
-
-
-        }
-
-        .colbox {
+    <style>.colbox {
             height: 50px;
-
-
+        }
+        .demo{
+            border:1px solid grey;
+            min-height:100px;
         }</style>
 <link rel="stylesheet" href="/app.a6a4d504.css"></head>
 <body>
 <div id="app">
+<!--    布局组件-->
+    <g-layout style="height:100vh;">
+        <g-sider class="demo">sider</g-sider>
+        <g-layout>
+            <g-header class="demo">header</g-header>
+            <g-content class="demo">content</g-content>
+            <g-footer class="demo">footer</g-footer>
+        </g-layout>
+
+    </g-layout>
+
     <!--    网格系统-->
-    <g-row gutter="100">
-        <g-col class="colbox" span="8">1</g-col>
-        <g-col class="colbox" span="8">2</g-col>
-        <g-col class="colbox" span="8">3</g-col>
-    </g-row>
-    <g-row class="rowbox">
-        <g-col span="2">1</g-col>
-        <g-col offset="2" span="20">2</g-col>
-    </g-row>
-    <!-- 输入框组件-->
-    <div class="box">
-        <g-input v-model="message"></g-input>
-        <p>{{message}}</p>
-        <g-input disabled="" value="小风"></g-input>
-        <g-input readonly="" value="小白"></g-input>
-    </div>
-    <div class="box">
-        <g-input error="错误" value="小y"></g-input>
-    </div>
+<!--    <g-row gutter="100">-->
+<!--        <g-col class="colbox" span="8">1</g-col>-->
+<!--        <g-col class="colbox" span="8">2</g-col>-->
+<!--        <g-col class="colbox" span="8">3</g-col>-->
+<!--    </g-row>-->
+<!--    <g-row class="rowbox">-->
+<!--        <g-col span="2">1</g-col>-->
+<!--        <g-col offset="2" span="20">2</g-col>-->
+<!--    </g-row>-->
+<!--    &lt;!&ndash; 输入框组件&ndash;&gt;-->
+<!--    <div class="box">-->
+<!--        <g-input v-model="message"></g-input>-->
+<!--        <p>{{message}}</p>-->
+<!--        <g-input disabled value="小风"></g-input>-->
+<!--        <g-input readonly value="小白"></g-input>-->
+<!--    </div>-->
+<!--    <div class="box">-->
+<!--        <g-input error="错误" value="小y"></g-input>-->
+<!--    </div>-->
 
     <!-- 按钮组件-->
-    <div class="box">
-        <g-button :loading="jiazai2" @click="changeLoading2">按钮</g-button>
-        <g-button :loading="jiazai3" @click="changeLoading3" icon="dianzan">按钮</g-button>
-        <g-button :loading="jiazai4" @click="changeLoading4" icon="dianzan" icon-position="right">按钮</g-button>
-        <g-button :loading="jiazai" @click="changeLoading">按钮</g-button>
-        <g-button-group>
-            <g-button icon="zuo">上一页</g-button>
-            <g-button icon="you" icon-position="right">下一页</g-button>
-        </g-button-group>
-    </div>
+<!--    <div class="box">-->
+<!--        <g-button :loading="jiazai2" @click="changeLoading2">按钮</g-button>-->
+<!--        <g-button :loading="jiazai3" @click="changeLoading3" icon="dianzan">按钮</g-button>-->
+<!--        <g-button :loading="jiazai4" @click="changeLoading4" icon="dianzan" icon-position="right">按钮</g-button>-->
+<!--        <g-button :loading="jiazai" @click="changeLoading">按钮</g-button>-->
+<!--        <g-button-group>-->
+<!--            <g-button icon="zuo">上一页</g-button>-->
+<!--            <g-button icon="you" icon-position="right">下一页</g-button>-->
+<!--        </g-button-group>-->
+<!--    </div>-->
 
 
 </div>
