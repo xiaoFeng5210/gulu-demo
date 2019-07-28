@@ -8,7 +8,8 @@
     import Vue from 'vue'
 
     export default {
-        name: "tab",
+        name: "tabs",
+        //需要用户去传值的时候我们使用props
         props:{
             selected:{
                 type:String,
@@ -22,18 +23,22 @@
                 }
             }
         },
+        //data不需要用户去传值。
         data(){
             return {
                 eventBus: new Vue()
             }
         },
-        provide(){
+        provide(){   //provide和inject需要一起使用，使祖先组件向子孙组件注入依赖。
             return {
                 eventBus:this.eventBus
             }
         },
         created(){
 
+        },
+        mounted(){
+            this.eventBus.$emit('update:selected',this.selected)
         }
     }
 </script>
