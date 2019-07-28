@@ -7,6 +7,7 @@
 <script>
     export default {
         name: "tabs-item",
+        inject:['eventBus'],
         props:{
             disabled:Boolean,
             default:false,

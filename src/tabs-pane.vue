@@ -6,7 +6,8 @@
 
 <script>
     export default {
-        name: "tabs-pane"
+        name: "tabs-pane",
+        inject:['eventBus'],
     }
 </script>
 
